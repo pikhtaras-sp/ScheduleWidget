@@ -12,6 +12,7 @@
         Monthly = 4,
         Quarterly = 8,
         Yearly = 16,
+        FloatingYearly = 32
         
         // ** This is not the way to handle this.  Check the DayOfWeekEnum instead. **
         //EveryWeekDay = 32, // Every weekday (Monday to Friday)

@@ -49,6 +49,12 @@ namespace ScheduleWidget.ScheduledEvents
         public Anniversary Anniversary { get; set; }
 
         /// <summary>
+        /// If this event has a yearly frequency then the anniversary
+        /// describes the fixed year after year month and day of recurrence.
+        /// </summary>
+        public FloatAnniversary FloatingAnniversary { get; set; }
+
+        /// <summary>
         /// For events that occur only part of the year (optional)
         /// </summary>
         public RangeInYear RangeInYear { get; set; }
@@ -289,6 +295,9 @@ namespace ScheduleWidget.ScheduledEvents
                 case FrequencyTypeEnum.Yearly:
                     // Leap years have 366 days.
                     maximumDaysWithoutOccurrence *= 366;
+                    break;
+                case FrequencyTypeEnum.FloatingYearly:
+                    maximumDaysWithoutOccurrence *= 373;
                     break;
             }
             if (daysInRange > maximumDaysWithoutOccurrence)

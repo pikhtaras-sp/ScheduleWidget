@@ -41,6 +41,10 @@ namespace ScheduleWidget.ScheduledEvents.FrequencyBuilder
                     builder = new YearlyEventBuilder(aEvent);
                     break;
 
+                case FrequencyTypeEnum.FloatingYearly:
+                    builder = new FloatingYearlyEventBuilder(aEvent);
+                    break;
+
                 default:
                     Trace.TraceError("Unknown frequency type '{0}'", aEvent.FrequencyTypeOptions);
                     builder = null;

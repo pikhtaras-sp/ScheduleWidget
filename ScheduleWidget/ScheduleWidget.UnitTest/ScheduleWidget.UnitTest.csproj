@@ -57,6 +57,7 @@
     <Compile Include="AAMultifunctionTests.cs" />
     <Compile Include="BasicTest.cs" />
     <Compile Include="AnniversaryTests.cs" />
+    <Compile Include="FloatingYearTests.cs" />
     <Compile Include="LastOccurrenceTests.cs" />
     <Compile Include="MonthTests.cs" />
     <Compile Include="QuarterlyTests.cs" />
